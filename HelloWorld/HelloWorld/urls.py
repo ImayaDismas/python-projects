@@ -34,4 +34,8 @@ urlpatterns = patterns('',
     #url(r'^admin/', include(admin.site.urls)),
     # url(regex, view, kwargs=None, name=None, prefix=''),
     url(r'HelloWorldApp/$', foo),
+    url(r'^$', foo, name='home')
+)
+urlpatterns += patterns('',
+    url(r'^places/(?P<name>\w+)/$', 'misc.views.home', name='places.view_place')
 )
