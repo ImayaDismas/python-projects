@@ -7,3 +7,6 @@ class Blog(models.Model):
    body = models.TextField()
    publish_date = models.DateTimeField('published date')
    gPlus = models.IntegerField()
+
+   def __str__(self):
+      return self.title
