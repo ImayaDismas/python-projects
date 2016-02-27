@@ -23,8 +23,8 @@ Including another URLconf
 from django.conf.urls import patterns, include, url
 from HelloWorldApp.views import foo
 
-#from django.contrib import admin
-#admin.autodiscover()
+from django.contrib import admin
+admin.autodiscover()
 
 urlpatterns = patterns('',
     # Examples:
@@ -34,8 +34,9 @@ urlpatterns = patterns('',
     #url(r'^admin/', include(admin.site.urls)),
     # url(regex, view, kwargs=None, name=None, prefix=''),
     url(r'HelloWorldApp/$', foo),
-    url(r'^$', foo, name='home')
+    url(r'^$', foo, name='home'),
+    url(r'^admin/', include(admin.site.urls)),
 )
-urlpatterns += patterns('',
-    url(r'^places/(?P<name>\w+)/$', 'misc.views.home', name='places.view_place')
-)
+# urlpatterns += patterns('',
+#     url(r'^places/(?P<name>\w+)/$', 'misc.views.home', name='places.view_place')
+# )
