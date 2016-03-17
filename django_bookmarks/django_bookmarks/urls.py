@@ -20,8 +20,14 @@ Including another URLconf
 # urlpatterns = [
 #     url(r'^$', admin.site.urls),
 # ]
-from django.conf.urls.defaults import *
+from django.conf.urls import *
 from bookmarks.views import *
-urlpatterns = ('',
-(r'^$', main_page),
-)
+
+
+urlpatterns = [
+    url(r'^$', main_page),
+]
+
+# urlpatterns = ('',
+# (r'^$', main_page),
+# )
