@@ -25,5 +25,7 @@ from bookmarks.views import *
 
 
 urlpatterns = [
-    url(r'^$', main_page),
+    # url(r'^$', main_page),
+    # (r'^$', main_page),
+    (r'^user/(\w+)/$', user_page),
 ]
