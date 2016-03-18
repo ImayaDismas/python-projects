@@ -70,9 +70,9 @@ TEMPLATES = [
     },
 ]
 
-TEMPLATE_DIRS = (
-    os.path.join(os.path.dirname(__file__), 'templates'),
-)
+# TEMPLATE_DIRS = (
+#     os.path.join(os.path.dirname(__file__), 'templates'),
+# )
 
 WSGI_APPLICATION = 'django_bookmarks.wsgi.application'
 
